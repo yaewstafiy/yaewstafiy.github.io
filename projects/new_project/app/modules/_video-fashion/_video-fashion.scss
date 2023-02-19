@@ -1,0 +1,82 @@
+.video-fashion {
+  padding: 120px 0;
+  background-image: url('../images/decor/pattern.svg');
+  background-color: $bg;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__popup {
+    margin-right: 60px;
+    max-width: 530px;
+    height: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__content {
+    max-width: 570px;
+  }
+
+  &__subtitle {
+    padding-top: 75px;
+    color: $accent;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__text {
+    margin-bottom: 55px;
+  }
+
+  &__link {
+    @extend %btn;
+  }
+}
+
+@media (max-width: 1050px) {
+  .video-fashion {
+    padding: 60px 0;
+
+    &__inner {
+      display: block;
+    }
+
+    &__popup {
+      max-width: 100%;
+      background-position: center top;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .video-fashion {
+    &__popup {
+      height: 270px;
+    }
+
+    &__subtitle {
+      padding-top: 40px;
+      font-size: 18px;
+    }
+  }
+
+}

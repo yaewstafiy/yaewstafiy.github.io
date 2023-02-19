@@ -1,0 +1,221 @@
+.footer {
+  background-color: $bg;
+}
+
+.footer-top {
+  padding: 70px 0 40px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+
+  &__contact {
+    width: 250px;
+    margin-right: 50px;
+  }
+
+  &__nav {
+    width: 170px;
+    margin-right: 30px;
+  }
+
+  &__item-form {
+    max-width: 470px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 33px;
+  }
+
+  &__address,
+  &__email,
+  &__phone {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  &__social-list {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  &__social-item+.footer-top__social-item {
+    padding-left: 18px;
+  }
+
+  &__social-link {
+    
+    path {
+      fill: $default;
+      transition: all .3s;
+    }
+
+    &:hover {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__title {
+    color: $title;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__form-input {
+    background-color: #fff;
+    max-width: 320px;
+    width: 100%;
+    border: none;
+    padding: 12px 12px 15px;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    margin-right: 10px;
+
+    &::placeholder {
+      color: $default;
+      font-size: 16px;
+    }
+  }
+
+  &__form-btn {
+    @extend %btn;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+.footer-bottom {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+
+  &__accept-img {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .footer-top {
+    flex-wrap: wrap;
+
+    &__item-form {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+}
+
+@media (max-width: 860px) {
+  .footer-top {
+    display: block;
+    text-align: center;
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__social-list {
+      justify-content: center;
+    }
+
+    &__form {
+      justify-content: center;
+    }
+
+    &__contact {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__nav {
+      margin: 30px auto 0;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__title--slide {
+      position: relative;
+
+      &:hover {
+        color: $accent;
+        cursor: pointer;
+      }
+    }
+
+    &__title--slide::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 5px;
+      top: 8px;
+      right: 0;
+      transition: all .5s;
+      background-image: url(../images/icons/angle-down.svg);
+    }
+
+    &__title--active::after {
+      background-image: url(../images/icons/angle-down.svg);
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .footer-bottom {
+    justify-content: center;
+
+    &__copy {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-top {
+    &__form {
+      flex-wrap: wrap;
+    }
+
+    &__form-input {
+      margin-right: 0;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+
+    &__form-btn {
+      width: 100%;
+    }
+  }
+
+  .footer-bottom {
+    &__accept-img {
+      margin-left: 15px;
+    }
+  }
+}

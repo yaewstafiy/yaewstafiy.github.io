@@ -1,0 +1,34 @@
+$primary-dark: #043873;
+$primary-light: #4F9CF9;
+$secondary-yellow: #FFE492;
+$secondary-blue: #A7CEFC;
+$black: #212529;
+$button-hover: #3c95ff;
+
+%inter-400 {
+  font-family: 'Inter-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%inter-500 {
+  font-family: 'Inter-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%inter-700 {
+  font-family: 'Inter-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%btn {
+  padding: 18px 40px;
+  color: #fff;
+  background-color: $primary-light;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+}

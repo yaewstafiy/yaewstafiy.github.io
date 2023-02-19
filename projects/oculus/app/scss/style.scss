@@ -1,0 +1,362 @@
+@import 'libs';
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header {
+  background-color: $bg;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid $gray;
+  z-index: 1000;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    &:hover {
+      background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &+& {
+      margin-left: 20px;
+    }
+  }
+
+  &__logo {
+    justify-self: center;
+  }
+}
+
+.basket {
+  padding-right: 0;
+  justify-self: end;
+
+  span {
+    display: none;
+  }
+}
+
+.basket--on {
+  position: relative;
+  padding-right: 10px;
+
+  span {
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $primary;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.top {
+  background-image: url(../images/top-promo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: calc(100vh - 82px);
+
+  &__title {
+    padding-top: 230px;
+    font-size: 96px;
+    line-height: 110px;
+    font-weight: 400;
+    display: block;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-size: 36px;
+    line-height: 41px;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  &__info {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+.buy-btn {
+  text-transform: uppercase;
+  margin-top: 50px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+  display: flex;
+  padding: 1px;
+
+  &__text {
+    color: $bg;
+    padding: 20px 110px;
+  }
+
+  &__price {
+    color: $primary;
+    background-color: $bg;
+    padding: 20px 105px;
+  }
+
+}
+
+.footer {
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  padding: 30px 0;
+  // margin-bottom: 45px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__social-item {
+    &+& {
+      margin-left: 20px;
+    }
+  }
+
+  &__social-link {
+    transition: all 3s;
+
+    &:hover {
+      svg path {
+        fill: #4f00fa;
+      }
+    }
+  }
+}
+
+.features {
+  padding: 100px 0;
+
+  &__titles {
+    display: flex;
+  }
+
+  &__title {
+    flex-basis: 300px;
+    padding-right: 20px;
+  }
+
+  &__text {
+    max-width: 330px;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 41px;
+    margin-bottom: 2px;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.features-tabs {
+  display: grid;
+  grid-template-columns: 300px auto;
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: 700;
+  }
+
+  &__btn-item {
+    &--active {
+      background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &+& {
+      margin-top: 20px;
+    }
+  }
+
+  &__content {
+    min-height: 300px;
+  }
+
+  &__content-item {
+    display: grid;
+    grid-template-columns: auto 280px;
+    grid-template-rows: auto 150px;
+    gap: 40px;
+  }
+
+  &__video {
+    grid-column: 2/3;
+    width: 280px;
+    height: 150px;
+    background-image: url(../images/content-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    padding: 10px 10px;
+
+    span {
+      color: $bg;
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    &-btn {
+      margin-left: 30px;
+      margin-bottom: 9px;
+    }
+  }
+
+  &__content-box {
+    h3 {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 18px;
+    }
+  }
+
+  &__content-img {
+    grid-row: 1/-1;
+    align-self: stretch;
+  }
+}
+
+.game {
+  margin-bottom: 100px;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__descr {
+    padding-right: 10px;
+  }
+
+  &__descr-title {
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+
+  &__descr-text {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-image: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    border-image-slice: 1;
+    width: 225px;
+    padding: 20px 40px;
+    text-align: center;
+    color: transparent;
+    font-weight: 700;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    background-clip: text;
+  }
+
+  &__item {
+    padding: 10px 20px 18px;
+    border: 1px solid #BC10D8;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      font-weight: 400;
+      margin-top: 10px;
+      font-size: 24px;
+      line-height: 28px;
+      color: $black;
+    }
+
+    &-text {
+      margin: 10px 0 40px;
+    }
+
+    &-link {
+      margin-top: auto;
+      background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show-grid {
+  display: grid;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
