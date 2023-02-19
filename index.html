@@ -23,8 +23,21 @@
       height: 100%;
     }
 
-    body {
+    .image-container {
       background-image: url(images/pattern-geometric-grid.png);
+      height: 100%;
+      width: 100%;
+      animation: movePictures 10s linear infinite;
+    }
+
+    @keyframes movePictures {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 300px 0;
+      }
     }
 
     li {
@@ -103,38 +116,39 @@
     }
   </style>
 
+  <div class="image-container">
+    <div class="container">
+      <h1 class="title">
+        Welcome to my portfolio
+      </h1>
 
-  <div class="container">
-    <h1 class="title">
-      Welcome to my portfolio
-    </h1>
+      <ul>
+        <li>
+          <a href="projects/delivery/app/index.html" target="_blank">
+            Delivery page
+          </a>
+        </li>
+        <li>
+          <a href="projects/new_project/app/index.html" target="_blank">
+            Internet-shop
+          </a>
+        </li>
+        <li>
+          <a href="projects/oculus/app/index.html" target="_blank">
+            Oculus page
+          </a>
+        </li>
+        <li>
+          <a href="projects/whitespace/app/index.html" target="_blank">
+            Whitespace
+          </a>
+        </li>
+      </ul>
 
-    <ul>
-      <li>
-        <a href="projects/delivery/app/index.html" target="_blank">
-          Delivery page
-        </a>
-      </li>
-      <li>
-        <a href="projects/new_project/app/index.html" target="_blank">
-          Internet-shop
-        </a>
-      </li>
-      <li>
-        <a href="projects/oculus/app/index.html" target="_blank">
-          Oculus page
-        </a>
-      </li>
-      <li>
-        <a href="projects/whitespace/app/index.html" target="_blank">
-          Whitespace
-        </a>
-      </li>
-    </ul>
-
-    <footer class="footer">
-      2023 © all rights reserved
-    </footer>
+      <footer class="footer">
+        2023 © all rights reserved
+      </footer>
+    </div>
   </div>
 
 </body>
