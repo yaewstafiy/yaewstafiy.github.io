@@ -38,3 +38,62 @@ button {
   text-transform: uppercase;
   font-weight: 400;
 }
+
+.burger {
+  display: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.show-grid {
+  display: grid;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#slide-to-top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #7511f1;
+  border-radius: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2000;
+  box-shadow: 0 0 17px 0px #6f0ff1;
+  transition: all .3s;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  svg {
+    width: 70%
+  }
+}

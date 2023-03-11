@@ -54,8 +54,9 @@ function watching() {
 
 function scripts() {
   return src([
-    // 'node_modules/jquery/dist/jquery.min.js',
-    'app/js/main.js'
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())

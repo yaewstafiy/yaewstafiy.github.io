@@ -43,7 +43,7 @@
 }
 
 .basket {
-  padding-right: 0;
+  padding-right: 10px;
   justify-self: end;
 
   span {
@@ -53,7 +53,6 @@
 
 .basket--on {
   position: relative;
-  padding-right: 10px;
 
   span {
     font-size: 12px;
@@ -131,7 +130,6 @@
   border-top: 1px solid $gray;
   border-bottom: 1px solid $gray;
   padding: 30px 0;
-  // margin-bottom: 45px;
 
   &__inner {
     display: flex;
@@ -139,8 +137,28 @@
     align-items: center;
   }
 
+  &__nav {
+    display: flex;
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    &:hover {
+      background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &+& {
+      margin-left: 20px;
+    }
+  }
+
   &__socials {
     display: flex;
+    justify-self: end;
   }
 
   &__social-item {
@@ -150,13 +168,19 @@
   }
 
   &__social-link {
-    transition: all 3s;
+    svg path {
+      transition: all .5s;
+    }
 
     &:hover {
       svg path {
         fill: #4f00fa;
       }
     }
+  }
+
+  &__logo {
+    justify-self: center;
   }
 }
 
@@ -241,7 +265,7 @@
     }
 
     &-btn {
-      margin-left: 30px;
+      margin-left: 15px;
       margin-bottom: 9px;
     }
   }
@@ -312,7 +336,9 @@
 
   &__item {
     padding: 10px 20px 18px;
-    border: 1px solid #BC10D8;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-image: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    border-image-slice: 1;
     display: flex;
     flex-direction: column;
 
@@ -338,25 +364,240 @@
   }
 }
 
-.hide {
+.buy {
+  margin-bottom: 110px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+  &__img {
+    margin-bottom: 30px;
+    margin: 0 auto;
+  }
+
+  .buy-btn {
+    margin: 0 auto;
+  }
+
+  &__bg {
+    @extend %helvetica-700;
+    font-size: 400px;
+    line-height: 400px;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    opacity: 0.1;
+    z-index: -1;
+    animation: line-text 6s linear 1s infinite;
+  }
+
+  @keyframes line-text {
+    from {
+      transform: translateX(115%);
+      transform-origin: left center;
+    }
+
+    to {
+      transform-origin: right center;
+      transform: translateX(-115%);
+    }
+  }
+}
+
+.shop {
+  margin-bottom: 100px;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  &__item:first-child {
+    grid-area: span 2;
+  }
+
+  &__item-img {
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.promo {
+  margin-bottom: 100px;
+  position: relative;
+
+  &__btn {
+    @extend %helvetica-700;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+}
+
+.accessories {
+  margin-bottom: 100px;
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    border: 1px solid transparent;
+    border-image: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    border-image-slice: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    margin-bottom: 10px;
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 28px;
+    color: $black;
+    min-height: 70px;
+  }
+
+  &__item-text {
+    margin: auto 0 40px;
+  }
+
+  &__price {
+    margin-top: auto;
+    @extend %helvetica-700;
+
+    span {
+      color: $black;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    text-align: center;
+    border: 1px solid transparent;
+    border-image: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    border-image-slice: 1;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 6px 0;
+  }
+}
+
+.contact {
+  margin-bottom: 100px;
+
+  &-border {
+    border-right: 1px solid $gray;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    color: $black;
+    margin-bottom: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 20px;
+  }
+
+  &__form {
+    max-width: 600px;
+    position: relative;
+  }
+
+  &__form-input {
+    width: 100%;
+    padding: 18px 80px 18px 0;
+    border: none;
+    border-bottom: 1px solid $gray;
+    margin-bottom: 10px;
+    outline: none;
+
+    &::placeholder {
+      font-size: 13px;
+      line-height: 15px;
+      color: $gray;
+    }
+  }
+
+  &__form-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: $gray;
+    border-radius: 50%;
+    top: 5px;
+  }
+
+  &__form-text {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+.menu-form {
   display: none;
 }
 
-.show-grid {
-  display: grid;
+.menu-image {
+  display: none;
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 0.5s;
-}
 
-@keyframes fade {
-  from {
-    opacity: 0.2;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
+@import 'media';

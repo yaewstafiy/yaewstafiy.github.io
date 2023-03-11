@@ -538,7 +538,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Нахожу элементы в HTML структуре с дата атрибутом Scroll
   // После чего для каждого элемента headerNavList и headerNavModal я добавляю обработчик событий на скролл с функцией closeNavModal, которая закрывает бургер меню
-
+  
+  function scrollToPage(directionDataScroll) {
+    window.scrollTo({
+      top: directionDataScroll.offsetTop - 75,
+      behavior: 'smooth'
+    });
+  }
+  
   headerNavList.forEach((item, i) => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
@@ -552,10 +559,4 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })
 
-  function scrollToPage(directionDataScroll) {
-    window.scrollTo({
-      top: directionDataScroll.offsetTop - 75,
-      behavior: 'smooth'
-    });
-  }
 });

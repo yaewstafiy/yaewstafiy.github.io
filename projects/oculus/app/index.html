@@ -11,33 +11,56 @@
 
 <body>
 
+  <div id="slide-to-top">
+    <span>
+      <svg fill="#ffffff" width="64px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+        stroke="#ffffff">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M17.504 26.025l.001-14.287 6.366 6.367L26 15.979 15.997 5.975 6 15.971 8.129 18.1l6.366-6.368v14.291z">
+          </path>
+        </g>
+      </svg>
+    </span>
+  </div>
+
   <div class="wrapper">
 
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <ul class="header__nav">
-            <li class="header__item">
-              <a class="header__link" href="#">Shop</a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Games</a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Metaverse</a>
-            </li>
-          </ul>
+          <nav class="header__menu">
+            <button class="burger">
+              <span></span>
+            </button>
+            <div class="overlay">
+              <img class="menu-image" src="images/main-logo.svg">
+              <ul class="header__nav">
+                <li class="header__item">
+                  <a class="header__link" href="#">Shop</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#">Games</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#">Metaverse</a>
+                </li>
+              </ul>
+            </div>
+
+          </nav>
           <div class="header__logo">
             <img src="images/main-logo.svg" alt="">
           </div>
-          <a class="basket basket--on" href="#">
+          <a class="basket" href="#">
             <img src="images/icons/shop-bag.svg" alt="">
             <span>1</span>
           </a>
         </div>
       </div>
     </header>
-
 
     <main class="main">
 
@@ -94,9 +117,9 @@
                   </p>
                 </div>
                 <div class="features-tabs__video">
-                  <button class="features-tabs__video-btn">
+                  <a class="features-tabs__video-btn" data-fancybox href="https://www.youtube.com/watch?v=Uvufun6xer8">
                     <img src="images/icons/play.svg" alt="">
-                  </button>
+                  </a>
                   <span>Watch the video</span>
                 </div>
               </div>
@@ -111,9 +134,9 @@
                   </p>
                 </div>
                 <div class="features-tabs__video">
-                  <button class="features-tabs__video-btn">
+                  <a class="features-tabs__video-btn" data-fancybox href="https://www.youtube.com/watch?v=Uvufun6xer8">
                     <img src="images/icons/play.svg" alt="">
-                  </button>
+                  </a>
                   <span>Watch the video</span>
                 </div>
               </div>
@@ -127,9 +150,9 @@
                   </p>
                 </div>
                 <div class="features-tabs__video">
-                  <button class="features-tabs__video-btn">
+                  <a class="features-tabs__video-btn" data-fancybox href="https://www.youtube.com/watch?v=Uvufun6xer8">
                     <img src="images/icons/play.svg" alt="">
-                  </button>
+                  </a>
                   <span>Watch the video</span>
                 </div>
               </div>
@@ -143,9 +166,9 @@
                   </p>
                 </div>
                 <div class="features-tabs__video">
-                  <button class="features-tabs__video-btn">
+                  <a class="features-tabs__video-btn" data-fancybox href="https://www.youtube.com/watch?v=Uvufun6xer8">
                     <img src="images/icons/play.svg" alt="">
-                  </button>
+                  </a>
                   <span>Watch the video</span>
                 </div>
               </div>
@@ -159,9 +182,9 @@
                   </p>
                 </div>
                 <div class="features-tabs__video">
-                  <button class="features-tabs__video-btn">
+                  <a class="features-tabs__video-btn" data-fancybox href="https://www.youtube.com/watch?v=Uvufun6xer8">
                     <img src="images/icons/play.svg" alt="">
-                  </button>
+                  </a>
                   <span>Watch the video</span>
                 </div>
               </div>
@@ -175,9 +198,9 @@
                   </p>
                 </div>
                 <div class="features-tabs__video">
-                  <button class="features-tabs__video-btn">
+                  <a class="features-tabs__video-btn" data-fancybox href="https://www.youtube.com/watch?v=Uvufun6xer8">
                     <img src="images/icons/play.svg" alt="">
-                  </button>
+                  </a>
                   <span>Watch the video</span>
                 </div>
               </div>
@@ -186,7 +209,7 @@
         </div>
       </section>
 
-      <section class="game">
+      <section class="game" id="games" data-scroll>
         <div class="container">
           <h3 class="section-title">Games</h3>
           <div class="game__inner">
@@ -232,28 +255,173 @@
         </div>
       </section>
 
+      <div class="buy">
+        <div class="buy__bg">OCULUS</div>
+        <img class="buy__img" src="images/oculus.png" alt="oculus">
+        <button class="buy-btn">
+          <span class="buy-btn__text">
+            BUY NOW
+          </span>
+          <span class="buy-btn__price">
+            399,99 USD
+          </span>
+        </button>
+      </div>
+
+
+      <section class="shop">
+        <div class="container">
+          <h3 class="section-title">IN THE BOX</h3>
+          <div class="shop__box">
+            <div class="shop__item">
+              <img class="shop__item-img" src="images/shop/1.jpg" alt="">
+              <p class="shop__item-title">VR Headset</p>
+            </div>
+
+            <div class="shop__item">
+              <img class="shop__item-img" src="images/shop/2.jpg" alt="">
+              <p class="shop__item-title">Two Touch Controllers & AA Batteries</p>
+            </div>
+
+            <div class="shop__item shop__item--text">
+              <p class="shop__item-text">What's included</p>
+            </div>
+
+            <div class="shop__item">
+              <img class="shop__item-img" src="images/shop/3.jpg" alt="">
+              <p class="shop__item-title">Charging Cable & Power Adapter</p>
+            </div>
+
+            <div class="shop__item">
+              <img class="shop__item-img" src="images/shop/4.jpg" alt="">
+              <p class="shop__item-title">Glasses Spacer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="promo" id="metaverse" data-scroll>
+        <div class="container">
+          <img class="promo__bg" src="images/promo.jpg" alt="">
+          <a class="promo__btn" data-fancybox href="https://www.youtube.com/watch?v=Uvufun6xer8">
+            GO
+          </a>
+        </div>
+      </div>
+
+      <section class="accessories" id="shop" data-scroll>
+        <div class="container">
+          <h3 class="section-title">
+            ACCESSORIES
+          </h3>
+          <h1 class="accessories__title">Personalize every experience</h1>
+          <div class="accessories__inner">
+
+            <div class="accessories__item">
+              <img class="accessories__img" src="images/accessories/1.jpg" alt="item">
+              <h2 class="accessories__item-title">Meta Quest 2 Carrying Case</h2>
+              <div class="accessories__item-text">
+                Protect your system–at home or away.
+              </div>
+              <div class="accessories__price">
+                <span>$59.99 USD</span>
+                <button class="accessories__btn">
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+
+            <div class="accessories__item">
+              <img class="accessories__img" src="images/accessories/2.jpg" alt="item">
+              <h2 class="accessories__item-title">Link Cable</h2>
+              <div class="accessories__item-text">
+                Harness the power of your PC with this premium fiber-optic cable.
+              </div>
+              <div class="accessories__price">
+                <span>$59.99 USD</span>
+                <button class="accessories__btn">
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+
+            <div class="accessories__item">
+              <img class="accessories__img" src="images/accessories/3.jpg" alt="item">
+              <h2 class="accessories__item-title">Meta Quest 2 Active Pack</h2>
+              <div class="accessories__item-text">
+                A wipeable facial interface, wrist straps, and knuckle straps.
+              </div>
+              <div class="accessories__price">
+                <span>$59.99 USD</span>
+                <button class="accessories__btn">
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+
+            <div class="accessories__item">
+              <img class="accessories__img" src="images/accessories/4.jpg" alt="item">
+              <h2 class="accessories__item-title">Meta Quest Gift Cards</h2>
+              <div class="accessories__item-text">
+                Redeemable on 350+ games and apps.
+              </div>
+              <div class="accessories__price">
+                <span>$59.99 USD</span>
+                <button class="accessories__btn">
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="contact">
+        <div class="container">
+          <div class="contact-border">
+            <h1 class="contact__title">Get news and updates</h1>
+            <div class="contact__inner">
+              <form class="contact__form" action="#">
+                <input class="contact__form-input" type="email" name="email" required placeholder="E-mail">
+                <button class="contact__form-btn" type="submit">GO</button>
+                <div class="contact__form-text">
+                  By signing up you agree to receive updates and marketing messages (e.g. email, social, etc.) from Meta
+                  about Meta’s existing and future products and services.
+                  You may withdraw your consent and unsubscribe at any time by clicking the unsubscribe link included in
+                  our messages.
+                  Your subscription is subject to the Terms and Privacy Policy.
+                </div>
+              </form>
+              <a class="contact__email" href="mailto:stasik7771@gmail.com">
+                oculusshop@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </main>
 
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <ul class="header__nav">
-            <li class="header__item">
-              <a class="header__link" href="#">Shop</a>
+          <ul class="footer__nav">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Shop</a>
             </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Games</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Games</a>
             </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Metaverse</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Metaverse</a>
             </li>
-            <li class="header__item">
-              <a class="header__link" href="#">Contact us</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Contact us</a>
             </li>
           </ul>
-          <div class="header__logo">
-            <img src="images/main-logo.svg" alt="">
-          </div>
           <ul class="footer__socials">
             <li class="footer__social-item">
               <a class="footer__social-link" href="#">
@@ -291,6 +459,8 @@
     </footer>
 
   </div>
+
+
 
   <script src="js/main.min.js"></script>
 </body>
